@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -19,18 +20,22 @@ class CustomAuthController extends Controller
 
     public function customLogin(Request $request)
     {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
 
+        $request->validate(
+            [
+                'email' => 'required',
+                'password' => 'required',
+            ]
+        );
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
-                ->withSuccess('Signed in');
+            return redirect()->intended('/')
+                ->withSuccess(Auth::user()->name);
+
+
         }
 
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->withError('Login details are not valid');
     }
 
 

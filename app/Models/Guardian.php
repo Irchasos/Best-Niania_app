@@ -18,4 +18,8 @@ class Guardian extends Model
     {
         return $this->BelongsToMany(Option::class, 'district_guardians', 'option_id', 'guardian_id');
     }
+    final public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'guardian_users', 'user_id', 'guardian_id');
+    }
 }
