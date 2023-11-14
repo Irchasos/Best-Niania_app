@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://starwars.eu.loclx.io/'),
 
     'asset_url' => env('ASSET_URL'),
 
@@ -164,6 +164,7 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
@@ -183,6 +184,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+
     ])->toArray(),
 
 ];
