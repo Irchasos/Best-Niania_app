@@ -63,7 +63,6 @@
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center"><input name="guardian" type="checkbox" value="1" /> <span class="pl-2 font-weight-bold">Guardian</span></div>
-                            <div class="d-flex align-items-center"><input name="guardian" type="checkbox" value="1" /> <span class="pl-2 font-weight-bold">Guardian</span></div>
                             <div><a href="#">Forget Password?</a></div>
                         </div>
                         <div class="pb-2">

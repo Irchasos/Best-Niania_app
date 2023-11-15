@@ -19,8 +19,17 @@
 
                     <li><a href="{{ route('search') }}">Wyszukiwarka</a></li>
                     <li><a href="{{ route('version') }}">Wersja Aktualizacji</a></li>
-                    {{--               <li><a href="{{route('login')}}">Logowanie</a></li> --}}
-                    {{--                <li><a href="{{route('register')}}">Rejestracja</a></li> --}}
+                    @auth
+                        {{(Auth::user()->name)}}
+                        <li><a href="{{route('signout')}}">Wyloguj</a></li>
+                    @endauth
+
+                    @guest
+                        <li><a href="{{route('login')}}">Logowanie</a></li>
+                        <li><a href="{{route('register-user')}}">Rejestracja</a></li>
+                    @endguest
+
+
                 </ul>
                 <!-- ################################################################################################ -->
             </nav>

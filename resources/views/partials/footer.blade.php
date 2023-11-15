@@ -29,23 +29,23 @@
     <div class="one_quarter">
         <h6 class="heading">Tincidunt ullamcorper</h6>
         <ul class="nospace clear latestimg">
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
                         alt=""></a></li>
 
         </ul>

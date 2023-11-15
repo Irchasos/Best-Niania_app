@@ -11,7 +11,7 @@ class District extends Model
 
     final public function guardians(): BelongsToMany
     {
-        return $this->BelongsToMany(Guardian::class, 'district_guardian', 'district_id', 'guardian_id');
+        return $this->belongsToMany(Guardian::class, 'district_guardians', 'district_id', 'guardian_id');
     }
 
 }

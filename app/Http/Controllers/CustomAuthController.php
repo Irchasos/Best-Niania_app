@@ -1,6 +1,16 @@
 <?php
 
+namespace App\Http\Middleware;
+
+use Closure;
+
 namespace App\Http\Controllers;
+
+use App\Models\District;
+use App\Models\Guardian;
+use App\Models\Option;
+
+use App\Models\OptionGuardian;
 use Illuminate\Support\Facades\Log;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
@@ -21,6 +31,7 @@ class CustomAuthController extends Controller
     public function customLogin(Request $request)
     {
 
+
         $request->validate(
             [
                 'email' => 'required',
@@ -37,7 +48,6 @@ class CustomAuthController extends Controller
 
         return redirect("login")->withError('Login details are not valid');
     }
-
 
 
     public function registration()
@@ -62,29 +72,139 @@ class CustomAuthController extends Controller
 
 
     public function create(array $data)
+
+
     {
-        return User::create([
+        if ($data['guardian'] == '1') {
+            Guardian::create([
+                'name' => $data['name'],
+                'email' => $data['email']
+
+            ]);
+        }
+        User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'guardian' => $data['guardian'],
             'password' => Hash::make($data['password'])
+
         ]);
+
+
     }
 
 
     public function dashboard()
     {
-        if(Auth::check()){
-            return view('dashboard');
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            $user_email = $user->email;
+            $guardian = Guardian::where('email', $user_email)->first();
+            $districts = District::all();
+            $options = Option::all();
+            return view('dashboard')->with('user', $user)->with('guardian', $guardian)->with('districts', $districts)->with('options', $options);
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
 
 
-    public function signOut() {
+    public function signOut()
+    {
         Session::flush();
         Auth::logout();
 
         return Redirect('login');
     }
+
+    public function updateDistrictStatus(Request $request)
+    {
+        // Sprawdź, czy użytkownik jest zalogowany
+        if (Auth::check()) {
+            // Pobierz zalogowanego użytkownika
+            $user = Auth::user();
+            $user_email = $user->email;
+
+            // Znajdź opiekuna (Guardian) na podstawie adresu e-mail
+            $guardian = Guardian::where('email', $user_email)->first();
+
+            // Sprawdź, czy udało się znaleźć opiekuna
+            if ($guardian) {
+
+                // Pobierz dane z formularza
+                $districtId = $request->input('district_id');
+                $status = $request->input('status');
+
+                // Sprawdź, czy dane są kompleksowe
+                if ($districtId && $status) {
+
+                    // Znajdź rejon (District) na podstawie id
+                    $district = District::find($districtId);
+
+                    // Sprawdź, czy rejon istnieje
+                    if ($district) {
+
+                        // Sprawdź, czy relacja już istnieje
+                        $hasRelation = $guardian->districts()->where('district_id', $districtId)->exists();
+                        // W zależności od statusu dodaj lub usuń relację
+                        if ($status === 'unset') {
+
+
+                            $guardian->districts()->attach($district);
+                        } elseif ($status === 'set') {
+
+
+                            $guardian->districts()->detach($district);
+                        }
+
+                        // Tutaj możesz dodać odpowiednie przekierowanie lub odpowiedź JSON itp.
+                        return redirect()->back()->with('success', 'Operacja zakończona sukcesem!');
+                    }
+                }
+            }
+        }
+
+        // Jeśli coś poszło nie tak, możesz przekierować użytkownika na odpowiednią stronę błędu
+        return redirect()->back()->with('error', 'Wystąpił błąd podczas przetwarzania żądania.');
+    }
+
+    public function updateOptionStatus(Request $request)
+    {
+        if (Auth::check()) {
+            $user = Auth::user();
+            $user_email = $user->email;
+
+            $guardian = Guardian::where('email', $user_email)->first();
+
+            if ($guardian) {
+                $optionId = $request->input('option_id');
+
+                if ($optionId !== null) {
+                    $option = Option::find($optionId);
+
+                    if ($option) {
+                        $hasRelation = $guardian->options()->where('option_id', $optionId)->exists();
+
+                        if ($hasRelation) {
+                            $guardian->options()->detach($option);
+                            $message = 'Operacja zakończona sukcesem! Opcja została odznaczona.';
+                        } else {
+                            $guardian->options()->attach($option);
+                            $message = 'Operacja zakończona sukcesem! Opcja została zaznaczona.';
+                        }
+
+
+                        return redirect()->back()->with('success', $message);
+                    }
+                }
+            }
+        }
+
+        return redirect()->back()->with('error', 'Wystąpił błąd podczas przetwarzania żądania.');
+    }
+
+
+
+
 }

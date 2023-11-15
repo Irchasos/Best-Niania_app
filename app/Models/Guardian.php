@@ -8,15 +8,20 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Guardian extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'email',
+        'id',
 
+    ];
     final public function districts(): BelongsToMany
     {
-        return $this->BelongsToMany(District::class, 'district_guardians', 'district_id', 'guardian_id');
+        return $this->belongsToMany(District::class, 'district_guardians', 'guardian_id', 'district_id');
     }
 
     final public function options(): BelongsToMany
     {
-        return $this->BelongsToMany(Option::class, 'district_guardians', 'option_id', 'guardian_id');
+        return $this->BelongsToMany(Option::class, 'guardian_options', 'guardian_id', 'option_id');
     }
     final public function users(): BelongsToMany
     {

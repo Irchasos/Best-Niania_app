@@ -15,14 +15,14 @@ class CreateGuardianTable extends Migration
     {
         Schema::create('guardians', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('email')->unique();
-            $table->string('description');
-            $table->integer('years_of_work');
-            $table->integer('phone_number');
+            $table->string('description')->nullable();
+            $table->integer('years_of_work')->nullable();
+            $table->integer('phone_number')->nullable();
             $table->string('rank')->nullable();
-            $table->string('degree');
-            $table->string('src');
+            $table->string('degree')->nullable();
+            $table->string('src')->nullable();
             $table->timestamps();
         });
     }
