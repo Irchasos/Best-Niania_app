@@ -21,6 +21,8 @@
                     <li><a href="{{ route('version') }}">Wersja Aktualizacji</a></li>
                     @auth
                         {{(Auth::user()->name)}}
+                        <li><a href="{{ route('dashboard') }}">Edit </a></li>
+
                         <li><a href="{{route('signout')}}">Wyloguj</a></li>
                     @endauth
 
