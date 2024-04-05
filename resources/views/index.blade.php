@@ -53,15 +53,15 @@
             <section class="group shout">
                 <h1 class="heading">Opiekunki Tygodnia</h1>
 
-                @foreach ($guards as $guard)
+               
                     <figure class=" one_third "><img style="height:200px;width:400px"
-                                                     src="{{ asset('images/') }}/{{ $guard->src }}" alt="">
-                        <figcaption class="heading"><a href="#">{{ $guard->name }}</a></figcaption>
+                                                     src="asset('images/') /guard->src  alt="">
+                        <figcaption class="heading"><a href="#">guard->name </a></figcaption>
                     </figure>
-                @endforeach
+               
             </section>
             <!-- ################################################################################################ -->
-            <!-- / main body -->
+            <!-- / main body
             <div class="clear"></div>
         </main>
     </div>
@@ -261,14 +261,14 @@
             </div>
             <ul class="nospace group team">
                 <li class="one_third ">
-                    @foreach ($latest_guardians as $latest_guardian)
+                    foreach latest_guardians as latest_guardian
                         <figure><a class="imgover" href="#"><img style="height:400px;width:400px"
-                                                                 src="{{ asset('images/') }}/{{ $latest_guardian->src }}"
+                                                                 src=" asset('images/') / latest_guardian->src "
                                                                  alt=""></a>
-                            <strong>{{ $latest_guardian->name }}</strong> </figcaption>
+                            <strong>latest_guardian->name </strong> </figcaption>
                         </figure>
                 </li>
-                @endforeach
+                endforeach 
 
             </ul>
             <!-- ################################################################################################ -->

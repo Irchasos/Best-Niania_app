@@ -12,12 +12,12 @@ class GuardianRepository implements GuardianRepositoryInterface
 
     final public function getGuardiansOfWeek()
     {
-        return Guardian::where('rank', '=', '9')->get();
+        // return Guardian::where('rank', '=', '9')->get();
     }
 
     final public function newGuardians()
     {
-        return Guardian::latest()->limit(2)->get();
+        // return Guardian::latest()->limit(2)->get();
     }
 
     final public function allGuardians()
