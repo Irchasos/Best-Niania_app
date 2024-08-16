@@ -19,18 +19,18 @@
 </script>
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="{{ asset('js/jquery.min.js') }}"></script>
-<script src="{{ asset('js/jquery.backtotop.js') }}"></script>
-<script src="{{ asset('js/jquery.mobilemenu.js') }}"></script>
-<script src="{{ asset('js/jquery.easypiechart.min.js') }}"></script>
-<script src="{{ asset('Search/js/extention/choices.js') }}"></script>
+<script src="{{ secure_asset('js/jquery.min.js') }}"></script>
+<script src="{{ secure_asset('js/jquery.backtotop.js') }}"></script>
+<script src="{{ secure_asset('js/jquery.mobilemenu.js') }}"></script>
+<script src="{{ secure_asset('js/jquery.easypiechart.min.js') }}"></script>
+<script src="{{ secure_asset('Search/js/extention/choices.js') }}"></script>
 <script>
     const choices = new Choices('[data-trigger]', {
         searchEnabled: false,
         itemSelectText: '',
     });
 </script>
-<script src="{{ asset('Search/js/extention/flatpickr.js') }}"></script>
+<script src="{{ secure_asset('Search/js/extention/flatpickr.js') }}"></script>
 <script>
     flatpickr(".datepicker", {
         dateFormat: "m/d/y"

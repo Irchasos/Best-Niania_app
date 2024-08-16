@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="bgded overlay" style="background-image: url('{{ asset('images/backgrounds/slider.jpeg') }}'); ">
+    <div class="bgded overlay" style="background-image: url('{{ secure_asset('images/backgrounds/slider.jpeg') }}'); ">
         <div id="pageintro" class="hoc clear">
             <!-- ################################################################################################ -->
             <article>
@@ -55,7 +55,7 @@
 
                
                     <figure class=" one_third "><img style="height:200px;width:400px"
-                                                     src="asset('images/') /guard->src  alt="">
+                                                     src="secure_asset('images/') /guard->src  alt="">
                         <figcaption class="heading"><a href="#">guard->name </a></figcaption>
                     </figure>
                
@@ -68,7 +68,7 @@
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
-    <div class="bgded overlay light" style="background-image:url("{{ asset('images/backgrounds/01.png') }}");">
+    <div class="bgded overlay light" style="background-image:url("{{ secure_asset('images/backgrounds/01.png') }}");">
     <section id="services" class="hoc container clear">
         <!-- ################################################################################################ -->
         <div class="sectiontitle">
@@ -250,33 +250,7 @@
             <!-- ################################################################################################ -->
         </section>
     </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper gradient">
-        <div class="hoc container clear">
-            <!-- ################################################################################################ -->
-            <div class="sectiontitle">
-                <h6 class="heading font-x2">Nowi opiekunowie</h6>
-            </div>
-            <ul class="nospace group team">
-                <li class="one_third ">
-                    foreach latest_guardians as latest_guardian
-                        <figure><a class="imgover" href="#"><img style="height:400px;width:400px"
-                                                                 src=" asset('images/') / latest_guardian->src "
-                                                                 alt=""></a>
-                            <strong>latest_guardian->name </strong> </figcaption>
-                        </figure>
-                </li>
-                endforeach 
-
-            </ul>
-            <!-- ################################################################################################ -->
-        </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
+    
     <div class="wrapper coloured">
         <section id="testimonials" class="hoc container clear">
             <!-- ################################################################################################ -->
@@ -285,7 +259,7 @@
                 <h6 class="heading font-x2">Ostatnie opinie</h6>
             </div>
             <article class="one_half first">
-                <figure class="clear"><img src="{{ asset('images/100x100.png') }}" alt="">
+                <figure class="clear"><img src="{{ secure_asset('images/100x100.png') }}" alt="">
                     <figcaption>
                         <h6 class="heading">D. Doe</h6>
                         <em>Adipiscing fusce eu velit</em>
@@ -296,7 +270,7 @@
                 </blockquote>
             </article>
             <article class="one_half">
-                <figure class="clear"><img src="{{ asset('images/100x100.png') }}" alt="">
+                <figure class="clear"><img src="{{ secure_asset('images/100x100.png') }}" alt="">
                     <figcaption>
                         <h6 class="heading">E. Doe</h6>
                         <em>Mauris erat aliquam leo</em>
@@ -322,7 +296,7 @@
             <ul id="latest" class="nospace group">
                 <li class="one_third first">
                     <article><a class="imgover" href="#"><img STYLE="height: 261px; width:348px"
-                                                              src="{{ asset('images/Gargamel.gif') }}"
+                                                              src="{{ secure_asset('images/Gargamel.gif') }}"
                                                               alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
@@ -335,7 +309,7 @@
                     </article>
                 </li>
                 <li class="one_third">
-                    <article><a class="imgover" href="#"><img src="{{ asset('images/348x261.png') }}"
+                    <article><a class="imgover" href="#"><img src="{{ secure_asset('images/348x261.png') }}"
                                                               alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
@@ -349,7 +323,7 @@
                     </article>
                 </li>
                 <li class="one_third">
-                    <article><a class="imgover" href="#"><img src="{{ asset('images/348x261.png') }}"
+                    <article><a class="imgover" href="#"><img src="{{ secure_asset('images/348x261.png') }}"
                                                               alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fas fa-user"></i> <a href="#">Admin</a></li>
@@ -375,7 +349,7 @@
             <div class="sectiontitle">
 
                 <h6 class="heading font-x2">Działamy na terenie całej warszawy</h6>
-                <img src="{{ asset('images/1.png') }}" alt="">
+                <img src="{{ secure_asset('images/1.png') }}" alt="">
             </div>
             <figure class="one_half first">
                 <ul class="nospace clear">
@@ -389,14 +363,12 @@
                 </ul>
             </figure>
             <article class="one_half">
-                <h6 class="heading">Purus nullam arcu integer</h6>
-                <p class="nospace btmspace-15">Elementum nisi ac volutpat vestibulum enim mi tincidunt eros sed justo
-                    magna
-                    odio sed lacus ut non ante sit amet est luctus dictum ut dolor ac.</p>
+                <h6 class="heading">Formularz Kontaktowy</h6>
+                <p class="nospace btmspace-15">Odpowiemy na podany przez Panstwa adres</p>
                 <form action="#" method="post">
                     <fieldset>
                         <legend>Newsletter:</legend>
-                        <input type="text" value="" placeholder="Name">
+                        <input type="text" value="" placeholder="Text">
                         <input type="text" value="" placeholder="Email">
                         <button type="submit" value="submit">Submit</button>
                     </fieldset>
@@ -408,5 +380,5 @@
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
     <!-- ################################################################################################ -->
-    <div class="bgded overlay row4" style="background-image:url("{{ asset('images/backgrounds/slider.jpeg') }}">
+    <div class="bgded overlay row4" style="background-image:url("{{ secure_asset('images/backgrounds/slider.jpeg') }}">
 @endsection

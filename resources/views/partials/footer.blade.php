@@ -1,11 +1,10 @@
 @yield('footer')
 <footer id="footer" class="hoc clear">
     <!-- ################################################################################################ -->
-    <div class="one_quarter first">
+    <div style="padding-left:20px;" class="one_quarter first">
 
-        <h1 class="logoname"><a href="index.html">Chill<span>a</span>id</a></h1>
-        <p>Scelerisque facilisis sapien turpis facilisis libero eu viverra purus dui ac leo sed vitae diam morbi sed
-            nibh in eget dolor phasellus rhoncus odio morbi elit nunc id elit donec elementum [<a
+        <h1 class="logoname"><a href="index.html">   Best<span>N</span>iania</a></h1>
+        <p>    Tworze w wolnych chwilach strony bazujace na laravel<a
                 href="#">&hellip;</a>]
         </p>
         <ul class="faico clear">
@@ -17,56 +16,52 @@
         </ul>
     </div>
     <div class="one_quarter">
-        <h6 class="heading">Volutpat metus nullam</h6>
+        <h6 class="heading">Inne strony</h6>
         <ul class="nospace linklist">
-            <li><a href="#">Sagittis leo morbi quis</a></li>
-            <li><a href="#">Nulla vehicula felis laoreet</a></li>
-            <li><a href="#">Pulvinar proin et eros ac</a></li>
-            <li><a href="#">Mi vulputate accumsan fusce</a></li>
-            <li><a href="#">At massa in sed tortor sit amet</a></li>
+            <li><a href="#">StarWars</a></li>
+            <li><a href="#">Trello</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">Portfolio</a></li>
         </ul>
     </div>
     <div class="one_quarter">
-        <h6 class="heading">Tincidunt ullamcorper</h6>
+        <h6 class="heading">Galeria</h6>
         <ul class="nospace clear latestimg">
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
-            <li><a class="imgover" href="#"><img src="{{ asset('images/100x100.png') }}"
+            <li><a class="imgover" href="#"><img src="{{ secure_asset('images/100x100.png') }}"
                         alt=""></a></li>
 
         </ul>
     </div>
     <div class="one_quarter">
-        <h6 class="heading">Fusce vel lectus nunc</h6>
+        <h6 class="heading">Nagrody</h6>
         <ul class="nospace linklist">
             <li>
                 <article>
-                    <p class="nospace btmspace-10"><a href="#">Lacinia donec tortor lectus varius vel egestas a
-                            dictum
-                            in odio mauris metus.</a></p>
-                    <time class="block font-xs" datetime="2045-04-06">Friday, 6<sup>th</sup> April 2045</time>
+                    <p class="nospace btmspace-10"><a href="#">BestNiania .</a></p>
+                    <time class="block font-xs" datetime="2024-04-06">Friday, 6<sup>th</sup> April 2024</time>
                 </article>
             </li>
             <li>
                 <article>
-                    <p class="nospace btmspace-10"><a href="#">Turpis iaculis ac hendrerit vel pretium non magna
-                            sed non
-                            metus ut at nisi morbi.</a></p>
-                    <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2045</time>
+                    <p class="nospace btmspace-10"><a href="#">UpperNiania</a></p>
+                    <time class="block font-xs" datetime="2045-04-05">Thursday, 5<sup>th</sup> April 2025</time>
                 </article>
             </li>
         </ul>
