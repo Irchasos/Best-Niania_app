@@ -1,1 +1,1 @@
-web: php-fpm --daemonize --pid /tmp/php-fpm.pid --listen $PORT
+web: heroku-php-apache2 public/
