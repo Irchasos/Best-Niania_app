@@ -1,0 +1,10 @@
+setup:
+  docker:
+    web: Dockerfile
+
+build:
+  docker:
+    web: Dockerfile
+
+run:
+  web: php-fpm
