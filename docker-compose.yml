@@ -1,39 +1,31 @@
-version: '2.0'
-services:
+version: "3.7"
 
-    #PHP Service
+services:
     app:
         build:
             context: .
             dockerfile: Dockerfile
-        image: cloudsigma.com/php
         container_name: bestNiania
-        restart: unless-stopped
-        tty: true
+        ports:
+            - "9000:9000"
         environment:
-            VIRTUAL_HOST: best-niania.local
-            SERVICE_NAME: app
-            SERVICE_TAGS: dev
-        working_dir: /var/www/html/
+            - VIRTUAL_HOST=best-niania.local
+            - SERVICE_NAME=app
+            - SERVICE_TAGS=dev
         volumes:
-            - ./:/var/www/html/
+            - .:/var/www/html
             - ./php/laravel.ini:/usr/local/etc/php/conf.d/laravel.ini
         networks:
             - app-network
 
-    #Nginx Service
     webserver:
         image: nginx:alpine
         container_name: bestNiania-webserver
-        environment:
-            VIRTUAL_HOST: best-niania.local
-        restart: unless-stopped
-        tty: true
         ports:
             - "80:80"
             - "443:443"
         volumes:
-            - ./:/var/www/html/
+            - .:/var/www/html
             - ./nginx/conf.d/:/etc/nginx/conf.d/
         networks:
             - app-network
@@ -41,7 +33,6 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         container_name: bestNiania-phpmyadmin
-        restart: unless-stopped
         ports:
             - "8081:80"
         environment:
@@ -50,30 +41,24 @@ services:
         networks:
             - app-network
 
-    # MySQL Service
     db:
         image: mysql:5.7.32
         container_name: bestNiania-db
-        restart: unless-stopped
-        tty: true
         ports:
             - "3306:3306"
         environment:
-            MYSQL_DATABASE: best_niania
-            MYSQL_ROOT_PASSWORD: 123
-            SERVICE_TAGS: dev
-            SERVICE_NAME: mysql
+            - MYSQL_DATABASE=best_niania
+            - MYSQL_ROOT_PASSWORD=123
         volumes:
             - dbdata:/var/lib/mysql/
             - ./mysql/my.cnf:/etc/mysql/my.cnf
         networks:
             - app-network
 
-#Docker Networks
 networks:
     app-network:
         driver: bridge
-#Volumes
+
 volumes:
     dbdata:
         driver: local

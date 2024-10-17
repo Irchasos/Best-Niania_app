@@ -43,23 +43,28 @@
                     </li>
                     <li class="one_quarter">
                         <article><a href="#"><i class="fas fa-heartbeat"></i></a>
-                            <h6 class="heading">EBezpieczeństwo</h6>
+                            <h6 class="heading">Bezpieczeństwo</h6>
                             <p>. Dbamy o to, aby każde miejsce, w którym przebywają, było bezpieczne i przyjazne.</p>
                         </article>
                     </li>
                 </ul>
             </section>
             <!-- ################################################################################################ -->
-            <section class="group shout">
-                <h1 class="heading">Opiekunki Tygodnia</h1>
+           <section class="group shout">
+    <h1 class="heading">Opiekunka Tygodnia</h1>
+    @if($top_guard)
+        <figure class="one_third">
+            <img style="height:200px;width:400px" src="{{ secure_asset('images/' . $top_guard->src) }}" alt="">
+            <figcaption class="heading">
+                <a href="#">{{ $top_guard->name }}</a>
+                <p>Liczba glosow {{ $top_guard->votes }} </p>
+            </figcaption>
+        </figure>
+    @else
+        <p>Brak opiekunów do wyświetlenia.</p>
+    @endif
+</section>
 
-               
-                    <figure class=" one_third "><img style="height:200px;width:400px"
-                                                     src="secure_asset('images/') /guard->src  alt="">
-                        <figcaption class="heading"><a href="#">guard->name </a></figcaption>
-                    </figure>
-               
-            </section>
             <!-- ################################################################################################ -->
             <!-- / main body
             <div class="clear"></div>

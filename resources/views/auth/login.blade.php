@@ -1,14 +1,56 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="login-form">
-        <div class="cotainer">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Login</h3>
-                        <div class="card-body">
-                            <form method="POST" action="{{ route('login.custom') }}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/f59bcd8580.js"></script>
+    <style>
+        body{
+            background: #c9ccd1;
+        }
+        .form-style input{
+            border:0;
+            height:50px;
+            border-radius:0;
+            border-bottom:1px solid #ebebeb;
+        }
+        .form-style input:focus{
+            border-bottom:1px solid #007bff;
+            box-shadow:none;
+            outline:0;
+            background-color:#ebebeb;
+        }
+        .sideline {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color:#ccc;
+        }
+        button{
+            height:50px;
+        }
+        .sideline:before,
+        .sideline:after {
+            content: '';
+            border-top: 1px solid #ebebeb;
+            margin: 0 20px 0 0;
+            flex: 1 0 20px;
+        }
+
+        .sideline:after {
+            margin: 0 0 0 20px;
+        }
+    </style>
+    <div class="container">
+        <div class="row m-5 no-gutters shadow-lg">
+            <div class="col-md-6 d-none d-md-block">
+                <img src="https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" class="img-fluid" style="min-height:100%;" />
+            </div>
+            <div class="col-md-6 bg-white p-5">
+                <h3 class="pb-3">Login Form</h3>
+                <div class="form-style">
+                   <form method="POST" action="{{ route('login.custom') }}">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Email" id="email" class="form-control" name="email"
@@ -32,7 +74,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="d-grid mx-auto">
+                         <div class="d-grid mx-auto">
                                     <button type="submit" class="btn btn-dark btn-block">Sign In</button>
                                     <br>
                                     <a href="sign-in/github" type="submit" class="btn btn-dark btn-block">Have you
@@ -46,11 +88,10 @@
                                     <a href="sign-in/slack" type="submit" class="btn btn-dark btn-block">Or use <i
                                             class="fa-brands fa-slack"></i></a>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
+                    </form>
                 </div>
+
             </div>
         </div>
-    </main>
-@endsection
+    </div>
+   @endsection
