@@ -72,26 +72,24 @@ class CustomAuthController extends Controller
 
 
     public function create(array $data)
+{
+    $user = User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'guardian' => isset($data['guardian']) && $data['guardian'] == '1' ? 1 : 0,
+        'password' => Hash::make($data['password']),
+    ]);
 
-
-    {
-        if ($data['guardian'] == '1') {
-            Guardian::create([
-                'name' => $data['name'],
-                'email' => $data['email']
-
-            ]);
-        }
-        User::create([
+    if ($user->guardian == 1) {
+        Guardian::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'guardian' => $data['guardian'],
-            'password' => Hash::make($data['password'])
-
         ]);
-
-
     }
+
+    return $user;
+}
+
 
 
     public function dashboard()

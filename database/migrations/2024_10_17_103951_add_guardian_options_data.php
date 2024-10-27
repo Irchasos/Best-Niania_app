@@ -1,4 +1,4 @@
-<?php
+Migration<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -87,13 +87,13 @@ class AddGuardianOptionsData extends Migration
             ['guardian_id' => 10, 'option_id' => 11],
             ['guardian_id' => 10, 'option_id' => 13],
 
-            ['guardian_id' => 11, 'option_id' => 1],
-            ['guardian_id' => 11, 'option_id' => 3],
-            ['guardian_id' => 11, 'option_id' => 5],
-            ['guardian_id' => 11, 'option_id' => 7],
-            ['guardian_id' => 11, 'option_id' => 9],
-            ['guardian_id' => 11, 'option_id' => 10],
-            ['guardian_id' => 11, 'option_id' => 14]
+            ['guardian_id' => 1, 'option_id' => 1],
+            ['guardian_id' => 1, 'option_id' => 3],
+            ['guardian_id' => 1, 'option_id' => 5],
+            ['guardian_id' => 1, 'option_id' => 7],
+            ['guardian_id' => 1, 'option_id' => 9],
+            ['guardian_id' => 1, 'option_id' => 10],
+            ['guardian_id' => 1, 'option_id' => 14]
         ]);
     }
 
