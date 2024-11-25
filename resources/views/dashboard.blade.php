@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout')
 @section('content')
 
     <style>
@@ -13,11 +13,8 @@
     <div class="container bootstrap snippets bootdey">
         <div class="panel-body inf-content">
             <div class="row">
-                <div class="col-md-4">
-                    <img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip"
-                         src="https://bootdey.com/img/Content/avatar/avatar7.png" data-original-title="Usuario">
+                <div class="col-md-4"> <img alt="" style="width:100%;" title="" class="img-circle img-thumbnail isTooltip" src="{{ $guardian->src ? asset($guardian->src) : 'https://bootdey.com/img/Content/avatar/avatar7.png' }}" data-original-title="Usuario"> </div>
 
-                </div>
                 <div class="col-md-6">
                     <h3><strong>User Information</strong><br></h3>
                     <div class="table-responsive">
@@ -133,91 +130,143 @@
                         <div class="table-responsive">
                             <table class="table table-user-information">
                                 <tbody>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-asterisk text-primary"></span>
-                                            LicenceNumber
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->id}}                                </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-user  text-primary"></span>
-                                            Description </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->description}}                                </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-cloud text-primary"></span>
-                                            Years of Work
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->years_of_work}}                                </td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-bookmark text-primary"></span>
-                                            Phone Number
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->phone_number}}                                </td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-eye-open text-primary"></span>
-                                            Rank
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->rank}}                                </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-envelope text-primary"></span>
-                                            Degree
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->degree}}                                </td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                            Photo
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        {{ $guardian->src}}                                </td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            <span class="glyphicon glyphicon-calendar text-primary"></span>
-                                            show opinie
-                                        </strong>
-                                    </td>
-                                    <td class="btn btn-outline-dark "> SHOW
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-asterisk text-primary"></span>
+                                                LicenceNumber
+                                            </strong>
+                                        </td>
+                                        <td class="text-primary">
+                                            {{ $guardian->id }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-user text-primary"></span>
+                                                Description
+                                            </strong>
+                                        </td>
+                                        <td class="text-primary">
+                                            <form action="{{ route('updateGuardianDescription', $guardian->id) }}" method="POST">
+                                                @csrf
+                                                <input type="text" name="description" value="{{ $guardian->description }}" class="form-control">
+                                                <button type="submit" class="btn btn-primary mt-2">Save</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-cloud text-primary"></span>
+                                                Years of Work
+                                            </strong>
+                                        </td>
+                                        <td class="text-primary">
+                                            <form action="{{ route('updateGuardianYearsOfWork', $guardian->id) }}" method="POST">
+                                                @csrf
+                                                <input type="text" name="years_of_work" value="{{ $guardian->years_of_work }}" class="form-control">
+                                                <button type="submit" class="btn btn-primary mt-2">Save</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-bookmark text-primary"></span>
+                                                Phone Number
+                                            </strong>
+                                        </td>
+
+                                        <td class="text-primary">
+                                            <form action="{{ route('updateGuardianPhoneNumber', $guardian->id) }}" method="POST">
+                                                @csrf
+                                                <input type="text" name="phone_number" value="{{ $guardian->phone_number }}" class="form-control">
+                                                <button type="submit" class="btn btn-primary mt-2">Save</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-eye-open text-primary"></span>
+                                                Rank
+                                            </strong>
+                                        </td>
+                                        <td class="achievements">
+                                                <div class="star-rating">
+                                                    @php
+                                                        $fullStars = floor($guardian->rank);
+                                                        $emptyStars = 5 - $fullStars;
+                                                    @endphp
+
+                                                    @for ($i = 0; $i < $fullStars; $i++)
+                                                        <span class="star">&#9733;</span> <!-- pełna gwiazdka -->
+                                                    @endfor
+
+                                                    @for ($i = 0; $i < $emptyStars; $i++)
+                                                        <span class="star empty">&#9734;</span> <!-- pusta gwiazdka -->
+                                                    @endfor
+                                            </div>
+
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-envelope text-primary"></span>
+                                                Degree
+                                            </strong>
+                                        </td>
+                                        <td class="text-primary">
+
+
+                                            <form action="{{ route('updateGuardianDegree', $guardian->id) }}" method="POST">
+                                                @csrf
+                                                <input type="text" name="degree" value="{{ $guardian->degree }}" class="form-control">
+                                                <button type="submit" class="btn btn-primary mt-2">Save</button>
+                                            </form>
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                                Photo
+                                            </strong>
+                                        </td>
+                                        <td class="text-primary">
+                                            <form action="{{ route('updateGuardianPhoto', $guardian->id) }}" method="POST" enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="hidden" name="src" value="{{ $guardian->src }}" class="form-control">
+                                                <input type="file" name="photo" accept="image/*" class="form-control">
+                                                <button type="submit" class="btn btn-primary mt-2">Save</button>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>
+                                                <span class="glyphicon glyphicon-calendar text-primary"></span>
+                                                Show Opinie
+                                            </strong>
+                                        </td>
+                                        <td>
+                                            <a href="{{ route('showGuardianReviews', $guardian->id) }}" class="btn btn-warning">SHOW</a>
+                                        </td>
+
+                                    </tr>
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+
                         </div>
                     </div>
                 </div>
@@ -247,12 +296,11 @@
                                                 </strong>
                                             </td>
                                             <td class="text-primary">
-                                                {{ $option->id }}
                                                 <button type="button" class="btn btn-sm
                                             @if($guardian->options->contains($option))
                                                 btn-warning set-button-option" data-option-id="{{ $option->id }}">Used
                                                     @else
-                                                        btn-outline-dark not-set-button-option" data-option-id="{{ $option->id }}">Not Set
+                                                        btn-outline-dark not-set-button-option btn-danger " data-option-id="{{ $option->id }}">Not Set
                                                     @endif
                                                 </button>
                                             </td>
@@ -308,7 +356,7 @@
                                                 </strong>
                                             </td>
                                             <td class="text-primary">
-                                                <button type="button" class="btn btn-sm
+                                                <button type="button" class=" btn btn-sm
                                                 @if($guardian->districts->contains($district))
                                                 btn-primary set-button-district" data-district-id="{{ $district->id }}">Your District
                                                     @else

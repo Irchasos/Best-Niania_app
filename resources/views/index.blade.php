@@ -1,69 +1,59 @@
 @extends('layout')
+ @section('content')
+  <section class="group shout">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h1 class="heading">Opiekunka Tygodnia</h1>
+            @if($top_guard)
+                <figure class="item">
+                    <img style="height:200px;width:366px" src="{{ secure_asset('images/' . $top_guard->src) }}" alt="">
+                    <figcaption class="heading">
+                        <a href="#">{{ $top_guard->name }}</a>
+                        <p>Liczba głosów: {{ $top_guard->votes }}</p>
+                    </figcaption>
+                </figure>
+            @else
+                <p>Brak opiekunów do wyświetlenia.</p>
+            @endif
+          </div>
+          <div class="col-sm">
+            <h1 class="heading">Najnowszy Użytkownik</h1>
+            @if($latest_user)
+                <figure class="item">
+                    <img style="height:200px;width:366px"src="{{ secure_asset('images/guardians/demo.jpeg') }}" alt="">
+                    <figcaption class="heading">
+                        <a href="#">{{ $latest_user->name }}</a>
+                        <p>Email: {{ $latest_user->email }}</p>
+                    </figcaption>
+                </figure>
+            @else
+                <p>Brak nowych użytkowników do wyświetlenia.</p>
+            @endif
+          </div>
+          <div class="col-sm">
+            <h1 class="heading">Najnowszy Opiekun</h1>
+            @if($latest_guardian)
+                <figure class="item">
+                    @if ($latest_guardian->src)
 
-@section('content')
-    <div class="bgded overlay" style="background-image: url('{{ secure_asset('images/backgrounds/slider.jpeg') }}'); ">
-        <div id="pageintro" class="hoc clear">
-            <!-- ################################################################################################ -->
-            <article>
-                <h3 class="heading">Pośrednioctwo zatrudnienia opiekunów</h3>
-                <p>Wyłacznie sprawdzeni wychowawcy</p>
-                <footer><a class="btn" href="#">Wybierz teraz</a></footer>
-            </article>
-            <!-- ################################################################################################ -->
+                    <img style="height:200px;width:366px" src="{{ secure_asset('images/' . $latest_guardian->src) }} " alt="">
+                    @else
+                    <img style="height:200px;width:366px"src="{{ secure_asset('images/guardians/demo.jpeg') }}" alt="">
+                    @endif
+                    <figcaption class="heading">
+                        <a href="#">{{ $latest_guardian->name }}</a>
+                        <p>Email: {{ $latest_guardian->email }}</p>
+                    </figcaption>
+                </figure>
+            @else
+                <p>Brak nowych opiekunów do wyświetlenia.</p>
+            @endif
+          </div>
         </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-
-    <div class="wrapper row3">
-        <main class="hoc container clear">
-            <!-- main body -->
-            <!-- ################################################################################################ -->
-            <section id="introblocks">
-                <ul class="nospace group btmspace-80 elements elements-four">
-                    <li class="one_quarter">
-                        <article><a href="#"><i class="fas fa-hand-rock"></i></a>
-                            <h6 class="heading">Zaangażowanie</h6>
-                            <p>Rozumiemy, że opieka to nie tylko praca, ale przede wszystkim powołanie.</p>
-                        </article>
-                    </li>
-                    <li class="one_quarter">
-                        <article><a href="#"><i class="fas fa-dove"></i></a>
-                            <h6 class="heading">Kreatywność</h6>
-                            <p>esteśmy zdeklarowani w rozwijaniu kreatywności, aby zapewnić naszym podopiecznym
-                                pełniejsze, radosne doświadczenia.</p>
-                        </article>
-                    </li>
-                    <li class="one_quarter">
-                        <article><a href="#"><i class="fas fa-history"></i></a>
-                            <h6 class="heading">Poświęcenie</h6>
-                            <p>Zrozumienie, troska i gotowość do niesienia pomocy są dla nas fundamentalnymi wartościami. </p>
-                        </article>
-                    </li>
-                    <li class="one_quarter">
-                        <article><a href="#"><i class="fas fa-heartbeat"></i></a>
-                            <h6 class="heading">Bezpieczeństwo</h6>
-                            <p>. Dbamy o to, aby każde miejsce, w którym przebywają, było bezpieczne i przyjazne.</p>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-            <!-- ################################################################################################ -->
-           <section class="group shout">
-    <h1 class="heading">Opiekunka Tygodnia</h1>
-    @if($top_guard)
-        <figure class="one_third">
-            <img style="height:200px;width:400px" src="{{ secure_asset('images/' . $top_guard->src) }}" alt="">
-            <figcaption class="heading">
-                <a href="#">{{ $top_guard->name }}</a>
-                <p>Liczba glosow {{ $top_guard->votes }} </p>
-            </figcaption>
-        </figure>
-    @else
-        <p>Brak opiekunów do wyświetlenia.</p>
-    @endif
+      </div>
 </section>
+
 
             <!-- ################################################################################################ -->
             <!-- / main body
@@ -255,7 +245,7 @@
             <!-- ################################################################################################ -->
         </section>
     </div>
-    
+
     <div class="wrapper coloured">
         <section id="testimonials" class="hoc container clear">
             <!-- ################################################################################################ -->

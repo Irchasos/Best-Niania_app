@@ -15,4 +15,5 @@
     <link href="{{ secure_asset('css/layout.css') }}" rel="stylesheet" type="text/css" media="all">
     <link href="{{ secure_asset('css/framework.css') }}" rel="stylesheet" type="text/css" media="all">
     <link href="{{ secure_asset('css/table.css') }}" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ asset('css/achievements.css') }}">
 </head>

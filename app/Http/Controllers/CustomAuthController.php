@@ -203,6 +203,61 @@ class CustomAuthController extends Controller
     }
 
 
+    public function updateDescription(Request $request, $id)
+    {
+        $guardian = Guardian::find($id);
+        if ($guardian) {
+            $guardian->description = $request->description;
+            $guardian->save();
+        }
+        return redirect()->back()->with('success', 'Description updated successfully.');
+    }
+
+    public function updateYearsOfWork(Request $request, $id)
+    {
+        $guardian = Guardian::find($id);
+        if ($guardian) {
+            $guardian->years_of_work = $request->years_of_work;
+            $guardian->save();
+        }
+        return redirect()->back()->with('success', 'Years of Work updated successfully.');
+    }
+
+    public function updatePhoneNumber(Request $request, $id)
+    {
+        $guardian = Guardian::find($id);
+        if ($guardian) {
+            $guardian->phone_number = $request->phone_number;
+            $guardian->save();
+        }
+        return redirect()->back()->with('success', 'Phone Number updated successfully.');
+    }
+
+
+    public function updateDegree(Request $request, $id)
+    {
+        $guardian = Guardian::find($id);
+        if ($guardian) {
+            $guardian->degree = $request->degree;
+            $guardian->save();
+        }
+        return redirect()->back()->with('success', 'Degree updated successfully.');
+    }
+
+    public function updatePhoto(Request $request, $id)
+    {
+        $guardian = Guardian::find($id);
+        if ($guardian && $request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('photos'), $filename);
+            $guardian->src = 'photos/' . $filename;
+            $guardian->save();
+        }
+        return redirect()->back()->with('success', 'Photo updated successfully.');
+    }
+
+
 
 
 }

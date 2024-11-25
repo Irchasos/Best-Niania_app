@@ -1,0 +1,17 @@
+/* Stylizacja dla kontenera gwiazdek */
+.achievements .star-rating {
+    display: inline-flex;
+    font-size: 3rem; /* Rozmiar gwiazdek */
+    color: gold;
+    margin: 10px 0; /* Margines dla oddzielenia od innych elementów */
+}
+
+/* Stylizacja dla pustych gwiazdek */
+.achievements .star.empty {
+    color: #ddd; /* Kolor pustych gwiazdek */
+}
+
+/* Stylizacja dla pełnych gwiazdek */
+.achievements .star {
+    margin-right: 5px; /* Odstęp między gwiazdkami */
+}

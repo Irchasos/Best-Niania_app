@@ -9,8 +9,8 @@
         if (successMessage) {
             // Wyświetl SweetAlert z komunikatem sukcesu
             Swal.fire({
-                title: 'Zalogowano użytkownika ',
-                text: successMessage,
+                title: SuccessMessage,
+                text: '',
                 icon: 'success',
                 confirmButtonText: 'OK'
             });

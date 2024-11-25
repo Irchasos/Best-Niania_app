@@ -48,4 +48,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Guardian::class, 'users_guardians', 'user_id', 'guardian_id');
     }
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
