@@ -14,6 +14,7 @@ class Guardian extends Model
         'name',
         'email',
         'id',
+        'district'
     ];
 
     public function districts(): BelongsToMany

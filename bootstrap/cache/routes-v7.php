@@ -102,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::0gOw2SxA7VNvLvNj',
+            '_route' => 'generated::zRyIIU5bwWMH42D5',
           ),
           1 => NULL,
           2 => 
@@ -352,6 +352,26 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/guardians/search' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'guardians.search',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
     ),
     2 => 
     array (
@@ -365,7 +385,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::EYzLfdbAA6PeBNEm',
+            '_route' => 'generated::kHuW1KDvv8RzTpX5',
           ),
           1 => 
           array (
@@ -695,7 +715,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::0gOw2SxA7VNvLvNj' => 
+    'generated::zRyIIU5bwWMH42D5' => 
     array (
       'methods' => 
       array (
@@ -718,7 +738,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::0gOw2SxA7VNvLvNj',
+        'as' => 'generated::zRyIIU5bwWMH42D5',
       ),
       'fallback' => false,
       'defaults' => 
@@ -882,7 +902,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::EYzLfdbAA6PeBNEm' => 
+    'generated::kHuW1KDvv8RzTpX5' => 
     array (
       'methods' => 
       array (
@@ -896,14 +916,14 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\Http\\Controllers\\SearchController@show',
-        'controller' => 'App\\Http\\Controllers\\SearchController@show',
+        'uses' => 'SearchController@show',
+        'controller' => 'SearchController@show',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::EYzLfdbAA6PeBNEm',
+        'as' => 'generated::kHuW1KDvv8RzTpX5',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1450,6 +1470,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'storeGuardianReview',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'guardians.search' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'guardians/search',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SearchController@search',
+        'controller' => 'App\\Http\\Controllers\\SearchController@search',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'guardians.search',
       ),
       'fallback' => false,
       'defaults' => 
