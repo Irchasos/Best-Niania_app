@@ -772,6 +772,51 @@
     ),
     'compiled' => '/var/www/html/storage/framework/views',
   ),
+  'livewire' => 
+  array (
+    'class_namespace' => 'App\\Livewire',
+    'view_path' => '/var/www/html/resources/views/livewire',
+    'layout' => 'components.layouts.app',
+    'lazy_placeholder' => NULL,
+    'temporary_file_upload' => 
+    array (
+      'disk' => NULL,
+      'rules' => NULL,
+      'directory' => NULL,
+      'middleware' => NULL,
+      'preview_mimes' => 
+      array (
+        0 => 'png',
+        1 => 'gif',
+        2 => 'bmp',
+        3 => 'svg',
+        4 => 'wav',
+        5 => 'mp4',
+        6 => 'mov',
+        7 => 'avi',
+        8 => 'wmv',
+        9 => 'mp3',
+        10 => 'm4a',
+        11 => 'jpg',
+        12 => 'jpeg',
+        13 => 'mpga',
+        14 => 'webp',
+        15 => 'wma',
+      ),
+      'max_upload_time' => 5,
+      'cleanup' => true,
+    ),
+    'render_on_redirect' => false,
+    'legacy_model_binding' => false,
+    'inject_assets' => true,
+    'navigate' => 
+    array (
+      'show_progress_bar' => true,
+      'progress_bar_color' => '#2299dd',
+    ),
+    'inject_morph_markers' => true,
+    'pagination_theme' => 'tailwind',
+  ),
   'flare' => 
   array (
     'key' => NULL,
@@ -797,6 +842,7 @@
         'max_chained_job_reporting_depth' => 5,
       ),
       6 => 'Spatie\\LaravelIgnition\\FlareMiddleware\\AddContext',
+      7 => 'Spatie\\LaravelIgnition\\FlareMiddleware\\AddExceptionHandledStatus',
       'Spatie\\FlareClient\\FlareMiddleware\\CensorRequestBodyFields' => 
       array (
         'censor_fields' => 
