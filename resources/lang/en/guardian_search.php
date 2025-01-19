@@ -6,7 +6,20 @@ return [
     'all' => 'All',
     'options' => 'Options',
     'search' => 'Search',
-    [ 'fixed_price_any_time' => 'Fixed price at any time', 'pet_care' => 'Pet care', 'care_for_multiple_people' => 'Care for multiple people', 'support_in_learning' => 'Support in learning', 'organizing_fun' => 'Organizing fun', 'camp_counselor' => 'Camp counselor', 'disabled_care' => 'Disabled care', 'chef' => 'Chef', 'many_years_experience' => 'Many years experience', 'night_care' => 'Night care', 'babysitter' => 'Babysitter', 'caretaker' => 'Caretaker', 'troubled_youth' => 'Troubled youth', 'work_in_english' => 'Work in English',
-        'psychological_support' => 'Psychological support',
-        ]
+   "Stała cena w dowolnej porze"=> "Stała cena w dowolnej porze",
+    "Opieka nad zwierzętami"=> "Opieka nad zwierzętami",
+     "Opieka nad większą ilością osób"=> "Opieka nad większą ilością osób",
+      "Wsparcie w nauce"=> "Wsparcie w nauce",
+       "Organizowanie zabawy"=> "Organizowanie zabawy", 
+       "Wychowawca kolonijny"=> "Wychowawca kolonijny",
+        "Opieka nad niepełnosprawnymi"=> "Opieka nad niepełnosprawnymi",
+         "Kucharz"=> "Kucharz", 
+         "Wieloletnie doświadczenie"=> "Wieloletnie doświadczenie", 
+         "Opieka w nocy"=> "Opieka w nocy", 
+         "Opiekunka"=> "Opiekunka",
+          "Opiekun"=> "Opiekun",
+          "Trudna młodzież"=> "Trudna młodzież", 
+          "Praca w języku angielskim"=> "Praca w języku angielskim",
+           "Wsparcie psychologiczne"=> "Wsparcie psychologiczne"
+    
 ];

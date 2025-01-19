@@ -1,10 +1,24 @@
 <?php
 return [
-    'search_by_name' => 'Wyszukaj po nazwie',
-    'placeholder_name' => 'imię, nazwisko, tutuł',
-    'district' => 'Dzielnica',
-    'all' => 'Wszystkie',
-    'options' => 'Opcje',
-    'search' => 'Szukaj',
-    [ 'fixed_price_any_time' => 'Stała cena w dowolnej porze', 'pet_care' => 'Opieka nad zwierzętami', 'care_for_multiple_people' => 'Opieka nad większą ilością osób', 'support_in_learning' => 'Wsparcie w nauce', 'organizing_fun' => 'Organizowanie zabawy', 'camp_counselor' => 'Wychowawca kolonijny', 'disabled_care' => 'Opieka nad niepełnosprawnymi', 'chef' => 'Kucharz', 'many_years_experience' => 'Wieloletnie doświadczenie', 'night_care' => 'Opieka w nocy', 'babysitter' => 'Opiekunka', 'caretaker' => 'Opiekun', 'troubled_youth' => 'Trudna młodzież', 'work_in_english' => 'Praca w języku angielskim', 'psychological_support' => 'Wsparcie psychologiczne']
-    ];
+    // 'search_by_name' => 'Wyszukaj po nazwie',
+    // 'placeholder_name' => 'imię, nazwisko, tutuł',
+    // 'district' => 'Dzielnica',
+    // 'all' => 'Wszystkie',
+    // 'options' => 'Opcje',
+    // 'search' => 'Szukaj',
+    // "Stała cena w dowolnej porze" => "Fixed price at any time", 
+    // "Opieka nad zwierzętami" => "Pet care",
+    //  "Opieka nad większą ilością osób" => "Care for multiple people",
+    //   "Wsparcie w nauce" => "Support in learning", 
+    //   "Organizowanie zabawy" => "Organizing fun", 
+    //   "Wychowawca kolonijny" => "Camp counselor",
+    //    "Opieka nad niepełnosprawnymi" => "Disabled care",
+    //     "Kucharz" => "Chef",
+    //      "Wieloletnie doświadczenie" => "Many years of experience", 
+    //      "Opieka w nocy" => "Night care", 
+    //      "Opiekunka" => "Babysitter",
+    //       "Opiekun" => "Caretaker",
+    //        "Trudna młodzież" => "Troubled youth",
+    //         "Praca w języku angielskim" => "Work in English",
+    //          "Wsparcie psychologiczne" => "Psychological support"
+ ];

@@ -29,19 +29,21 @@
                         </div>
                     </div>
                     <div class="row third">
-                        <label>{{ __('guardian_search.options') }}</label>
-                        <div class="row">
-                            @foreach ($options as $option)
-                                <div class="col-md-4">
-                                    <div class="input-checkbox">
-                                        <input type="checkbox" name="options[]" value="{{ $option->id }}" id="option{{ $option->id }}">
-                                        <label for="option{{ $option->id }}">{{ __('guardian_search.'.$option->name) }}</label>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="row fourth">
+    <label>{{ __('guardian_search.options') }}</label>
+    <div class="row">
+        @foreach ($options as $option)
+            <div class="col-md-4">
+                <div class="input-checkbox">
+                    <input type="checkbox" name="options[]" value="{{ $option->id }}" id="option{{ $option->id }}">
+                    <label for="option{{ $option->id }}">
+                        {{ __('guardian_search.' . $option->name) }} 
+                    </label>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+
                         <button class="btn btn-primary" type="submit">{{ __('guardian_search.search') }}</button>
                     </div>
                 </div>

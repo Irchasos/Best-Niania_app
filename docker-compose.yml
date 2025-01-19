@@ -1,64 +1,82 @@
-version: "3.7"
+version: '3.7'
 
 services:
-    app:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        container_name: bestNiania
-        ports:
-            - "9000:9000"
-        environment:
-            - VIRTUAL_HOST=best-niania.local
-            - SERVICE_NAME=app
-            - SERVICE_TAGS=dev
-        volumes:
-            - .:/var/www/html
-            - ./php/laravel.ini:/usr/local/etc/php/conf.d/laravel.ini
-        networks:
-            - app-network
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bestNiania
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www/html/
+    volumes:
+      - ./:/var/www/html/
+      - ./php/laravel.ini:/usr/local/etc/php/conf.d/laravel.ini
+    networks:
+      - app-network-bestniania
 
-    webserver:
-        image: nginx:alpine
-        container_name: bestNiania-webserver
-        ports:
-            - "80:80"
-            - "443:443"
-        volumes:
-            - .:/var/www/html
-            - ./nginx/conf.d/:/etc/nginx/conf.d/
-        networks:
-            - app-network
+  webserver:
+    image: nginx:alpine
+    container_name: bestNiania-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/var/www/html/
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./certbot/www:/var/www/certbot  # Certbot udostępniony dla Nginx
+      - ./certbot/conf:/etc/letsencrypt
+    networks:
+      - app-network-bestniania
 
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: bestNiania-phpmyadmin
-        ports:
-            - "8081:80"
-        environment:
-            - PMA_HOST=db
-            - PMA_PORT=3306
-        networks:
-            - app-network
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/conf:/etc/letsencrypt
+    networks:
+      - app-network-bestniania
 
-    db:
-        image: mysql:5.7.32
-        container_name: bestNiania-db
-        ports:
-            - "3306:3306"
-        environment:
-            - MYSQL_DATABASE=best_niania
-            - MYSQL_ROOT_PASSWORD=123
-        volumes:
-            - dbdata:/var/lib/mysql/
-            - ./mysql/my.cnf:/etc/mysql/my.cnf
-        networks:
-            - app-network
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: bestNiania-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    networks:
+      - app-network-bestniania
+
+  db:
+    image: mysql:5.7.32
+    container_name: bestNiania-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: best_niania
+      MYSQL_ROOT_PASSWORD: 123
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network-bestniania
 
 networks:
-    app-network:
-        driver: bridge
+  app-network-bestniania:
+    driver: bridge
 
 volumes:
-    dbdata:
-        driver: local
+  dbdata:
+    driver: local
