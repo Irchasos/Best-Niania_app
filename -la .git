@@ -1,0 +1,23 @@
+[33m4fd45d2f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: Restore changes
+[33me8d56b34[m HEAD@{1}: checkout: moving from 70a9f2c3845d3964c4e93386df1232d16958aaaa to main
+[33m70a9f2c3[m HEAD@{2}: commit: Initial commit
+[33m9678eaf8[m[33m ([m[1;31mheroku/main[m[33m)[m HEAD@{3}: reset: moving to 9678eaf8549ac8de3dc7c584fb08181254ca4fa1 [4fe3a8b5742020347a9512aa36367a9910180752]
+[33m38e8e145[m HEAD@{4}: commit: Auto stash before merge of "main" and "origin/main"
+[33m3fe04db4[m HEAD@{5}: revert: Revert "Guaridan choose - views"
+[33m5b7ac5eb[m HEAD@{6}: commit: Auto stash before revert of "translate views `2"
+[33m530077f1[m HEAD@{7}: checkout: moving from main to 530077f13f759cadc61273cd3ffaee82dbec4b54
+[33me8d56b34[m HEAD@{8}: reset: moving to HEAD
+[33me8d56b34[m HEAD@{9}: commit: 9678eaf8 translate views `2
+[33m4d0623c1[m HEAD@{10}: commit: xd
+[33m9678eaf8[m[33m ([m[1;31mheroku/main[m[33m)[m HEAD@{11}: reset: moving to 9678eaf8549ac8de3dc7c584fb08181254ca4fa1
+[33mc1c9196e[m HEAD@{12}: reset: moving to c1c9196eb8bbb0f546ea0eefc5264023431d43a2
+[33mf66cbaf5[m HEAD@{13}: reset: moving to HEAD
+[33mf66cbaf5[m HEAD@{14}: reset: moving to HEAD
+[33mf66cbaf5[m HEAD@{15}: reset: moving to HEAD
+[33mf66cbaf5[m HEAD@{16}: revert: Revert "9678eaf8 translate views `2"
+[33me9bbd8ca[m HEAD@{17}: commit: 9678eaf8 translate views `2
+[33m530077f1[m HEAD@{18}: commit: Guaridan choose - views
+[33mc1c9196e[m HEAD@{19}: commit: Added node_modules to .gitignore and removed from repository
+[33m9678eaf8[m[33m ([m[1;31mheroku/main[m[33m)[m HEAD@{20}: reset: moving to HEAD
+[33m9678eaf8[m[33m ([m[1;31mheroku/main[m[33m)[m HEAD@{21}: reset: moving to HEAD
+[33m9678eaf8[m[33m ([m[1;31mheroku/main[m[33m)[m HEAD@{22}: clone: from https://github.com/Irchasos/Best-Niania_app.git
