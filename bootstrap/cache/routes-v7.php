@@ -38,84 +38,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/livewire/update' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'livewire.update',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/livewire/livewire.js' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::cokQ4lIO3dJYh9Mg',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/livewire/livewire.min.js.map' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::50Bj091eN9YKARab',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/livewire/upload-file' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'livewire.upload-file',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
       '/_ignition/health-check' => 
       array (
         0 => 
@@ -180,7 +102,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::RkG97QxQaexL5GZS',
+            '_route' => 'generated::5wJjYIhiO4jiR8I9',
           ),
           1 => NULL,
           2 => 
@@ -473,40 +395,17 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/livewire/preview\\-file/([^/]++)(*:39)|/set\\-locale/([^/]++)(*:67)|/guardian/([^/]++)(?|(*:95)|/reviews(?|(*:113)))|/update\\-guardian\\-(?|de(?|scription/([^/]++)(*:168)|gree/([^/]++)(*:189))|years\\-of\\-work/([^/]++)(*:222)|pho(?|ne\\-number/([^/]++)(*:255)|to/([^/]++)(*:274))))/?$}sDu',
+      0 => '{^(?|/set\\-locale/([^/]++)(*:28)|/guardian(?|/([^/]++)(?|(*:59)|/reviews(?|(*:77)))|s/search/([^/]++)(*:103))|/update\\-guardian\\-(?|de(?|scription/([^/]++)(*:157)|gree/([^/]++)(*:178))|years\\-of\\-work/([^/]++)(*:211)|pho(?|ne\\-number/([^/]++)(*:244)|to/([^/]++)(*:263))))/?$}sDu',
     ),
     3 => 
     array (
-      39 => 
+      28 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'livewire.preview-file',
-          ),
-          1 => 
-          array (
-            0 => 'filename',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      67 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'generated::pjzo9lOINzzKSj23',
+            '_route' => 'generated::YgGw8epxe2xmI0Er',
           ),
           1 => 
           array (
@@ -523,13 +422,13 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      95 => 
+      59 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::O888FzxckpWTSfxt',
+            '_route' => 'generated::R5upjBGq6AxeOPtW',
           ),
           1 => 
           array (
@@ -546,7 +445,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      113 => 
+      77 => 
       array (
         0 => 
         array (
@@ -588,7 +487,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      168 => 
+      103 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'guardians.show',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      157 => 
       array (
         0 => 
         array (
@@ -610,7 +532,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      189 => 
+      178 => 
       array (
         0 => 
         array (
@@ -632,7 +554,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      222 => 
+      211 => 
       array (
         0 => 
         array (
@@ -654,7 +576,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      255 => 
+      244 => 
       array (
         0 => 
         array (
@@ -676,7 +598,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      274 => 
+      263 => 
       array (
         0 => 
         array (
@@ -735,148 +657,6 @@ app('router')->setCompiledRoutes(
           0 => 'web',
         ),
         'as' => 'sanctum.csrf-cookie',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'livewire.update' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'livewire/update',
-      'action' => 
-      array (
-        'uses' => 'Livewire\\Mechanisms\\HandleRequests\\HandleRequests@handleUpdate',
-        'controller' => 'Livewire\\Mechanisms\\HandleRequests\\HandleRequests@handleUpdate',
-        'middleware' => 
-        array (
-          0 => 'web',
-        ),
-        'as' => 'livewire.update',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::cokQ4lIO3dJYh9Mg' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'livewire/livewire.js',
-      'action' => 
-      array (
-        'uses' => 'Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@returnJavaScriptAsFile',
-        'controller' => 'Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@returnJavaScriptAsFile',
-        'as' => 'generated::cokQ4lIO3dJYh9Mg',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'generated::50Bj091eN9YKARab' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'livewire/livewire.min.js.map',
-      'action' => 
-      array (
-        'uses' => 'Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@maps',
-        'controller' => 'Livewire\\Mechanisms\\FrontendAssets\\FrontendAssets@maps',
-        'as' => 'generated::50Bj091eN9YKARab',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'livewire.upload-file' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'livewire/upload-file',
-      'action' => 
-      array (
-        'uses' => 'Livewire\\Features\\SupportFileUploads\\FileUploadController@handle',
-        'controller' => 'Livewire\\Features\\SupportFileUploads\\FileUploadController@handle',
-        'as' => 'livewire.upload-file',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'livewire.preview-file' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'livewire/preview-file/{filename}',
-      'action' => 
-      array (
-        'uses' => 'Livewire\\Features\\SupportFileUploads\\FilePreviewController@handle',
-        'controller' => 'Livewire\\Features\\SupportFileUploads\\FilePreviewController@handle',
-        'as' => 'livewire.preview-file',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1001,7 +781,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::RkG97QxQaexL5GZS' => 
+    'generated::5wJjYIhiO4jiR8I9' => 
     array (
       'methods' => 
       array (
@@ -1018,13 +798,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007100000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005310000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::RkG97QxQaexL5GZS',
+        'as' => 'generated::5wJjYIhiO4jiR8I9',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1040,7 +820,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::pjzo9lOINzzKSj23' => 
+    'generated::YgGw8epxe2xmI0Er' => 
     array (
       'methods' => 
       array (
@@ -1054,17 +834,17 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:148:"function ($locale) {
+        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:155:"static function ($locale) {
     \\session([\'locale\' => $locale]);
     \\Illuminate\\Support\\Facades\\App::setLocale($locale);
     return \\redirect()->back();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000007120000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000005330000000000000000";}}',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::pjzo9lOINzzKSj23',
+        'as' => 'generated::YgGw8epxe2xmI0Er',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1228,7 +1008,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::O888FzxckpWTSfxt' => 
+    'generated::R5upjBGq6AxeOPtW' => 
     array (
       'methods' => 
       array (
@@ -1249,7 +1029,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::O888FzxckpWTSfxt',
+        'as' => 'generated::R5upjBGq6AxeOPtW',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1870,6 +1650,43 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'guardians.search',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'guardians.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'guardians/search/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\Http\\Controllers\\SearchController@show',
+        'controller' => 'App\\Http\\Controllers\\SearchController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'guardians.show',
       ),
       'fallback' => false,
       'defaults' => 
